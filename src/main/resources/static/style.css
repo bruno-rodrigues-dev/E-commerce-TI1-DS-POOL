@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    height: 60px;
+    border-bottom: 1px solid #e8e8e8;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+.nav-spacer {
+    flex: 1;
+}
+
+.btn-novo-produto {
+    background-color: #b5820a;
+    color: #fff !important;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-novo-produto:hover {
+    background-color: #9a6e08;
+    opacity: 1 !important;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+    .product-grid { grid-template-columns: 1fr; }
+}
+
+.product-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ececec;
+    background: #fff;
+    transition: box-shadow 0.15s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
+}
+
+.product-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 0.85rem 1rem 1.1rem;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    white-space: nowrap;
+    margin-left: 8px;
+}
+
+.product-description {
+    font-size: 0.875rem;
+    color: #9a9a9a;
+    line-height: 1.4;
+}
+
+hr {
+    display: none;
+}
